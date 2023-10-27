@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --very-dark-blue-main-bgn: hsl(233, 47%, 7%);
+  --dark-desat-blue-card-bgn: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transp-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transp-white-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  line-height: 1.667;
+  background-color: hsl(0, 0%, 0%);
+  color: var(--slightly-transp-white-paragraph)
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: clamp(32px, 3.06vw, 44px);
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 1110px;
+  min-width: 327px;
+  width: 77.083vw;
+  background-color: var(--very-dark-blue-main-bgn);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.wrapper,
+.attribution {
+  position: absolute;
+}
+
+.attribution {
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--slightly-transp-white-paragraph);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.stat-cont,
+.hero-img {
+  width: 50%;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(60%) brightness(70%);
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--soft-violet);
+  opacity: 1;
+  mix-blend-mode: multiply;
+  filter: saturate(170%);
+}
+
+.stat-cont {
+  padding: clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 16px;
+}
+
+h1 span {
+  color: var(--soft-violet);
+}
+
+.stat-data {
+  width: 100%;
+  display: flex;
+  column-gap: 8px;
+  justify-content: space-between;
+}
+.stat-item p{
+  font-family: 'Lexend Deca', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+ .wrapper {
+  width: 87.2vw;
+ }
+}
+
+@media only screen and (max-width: 620px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .stat-cont,
+  .hero-img {
+    width: 100%;
+  }
+
+  .stat-data {
+    margin-top: 24px;
+    flex-direction: column;
+  }
+}
