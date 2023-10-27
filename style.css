@@ -63,6 +63,7 @@ h3 {
   bottom: 1rem;
   width: 100%;
   text-align: center;
+  margin-top: 24px;
 }
 
 .attribution a {
@@ -127,12 +128,36 @@ h1 span {
  .wrapper {
   width: 87.2vw;
  }
+
 }
 
+
+
 @media only screen and (max-width: 620px) {
+  body {
+    display: flex;
+    height: 100dvh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .wrapper {
     flex-direction: column-reverse;
     text-align: center;
+    transform: translate(0, 0);
+    margin-top: 5vw;
+  }
+
+  .attribution {
+    margin-bottom: 5vw;
+    min-width: 327px;
+  }
+
+  .wrapper,
+  .attribution {
+  position: static;
   }
 
   .stat-cont,
@@ -144,4 +169,6 @@ h1 span {
     margin-top: 24px;
     flex-direction: column;
   }
+
+
 }
