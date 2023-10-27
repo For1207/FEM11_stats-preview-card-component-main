@@ -44,7 +44,7 @@ h3 {
 body {
   display: flex;
   height: 100dvh;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
